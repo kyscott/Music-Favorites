@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-	var FavoriteArtists = sequelize.define('favoriteArtists', {
+	var Artist = sequelize.define('artist', {
 		artistId: {
 			autoIncrement: true,
 			primaryKey: true,
@@ -11,6 +11,6 @@ module.exports = function(sequelize, Sequelize) {
 		}
 	});
 
-	return FavoriteArtists;
+	return Artist;
 
 }

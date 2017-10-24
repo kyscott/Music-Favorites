@@ -36,17 +36,4 @@ render () { return (
 )};
 }
 
-//
-// const App = () => (
-//   <Router>
-//     <div>
-//       <Route exact path="/" component={SignInPage}/>
-//       <Route path="/home" component={Homepage}/>
-//       <Route path="/artist/:artistName" component={ArtistPage}/>
-//     </div>
-//   </Router>
-// )
-
-
-
 export default App;

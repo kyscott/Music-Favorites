@@ -1,4 +1,4 @@
-var FavoriteArtists = require("./favoriteArtists.js");
+var Artist = require("./Artist.js");
 
 module.exports = function(sequelize, Sequelize) {
 
@@ -30,7 +30,5 @@ module.exports = function(sequelize, Sequelize) {
 	});
 
 	return User;
-
-  User.hasMany(FavoriteArtists,{as: 'favoriteArtists', foreignKey: id})
 
 }
