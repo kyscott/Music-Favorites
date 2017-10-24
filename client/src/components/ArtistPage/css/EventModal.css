@@ -12,3 +12,8 @@ a.event-link:hover {
 	height: 25%;
 	width: 25%;
 }
+
+table, th, td, tbody {
+	text-align: center;
+	color: black;
+}

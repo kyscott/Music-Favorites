@@ -5,18 +5,27 @@ import moment from 'moment';
 
 const EventModal = props => {
 
-const events = props.events;
+const events = props.events
 console.log(events)
 
-// const eventList = events.map((event, index) => {
-//     <tr>
-//         <td><a className="event-link" href={event.uri} target="_blank">{event.displayName}</a></td>
-//         <td>{moment(event.start.date).format("MMM Do YY")}</td>
-//         <td>{moment(event.start.time, 'HH:mm').format('hh:mm a')}</td>
-//         <td><a className="event-link" href={event.venue.uri} target="_blank">{event.venue.displayName}</a></td>
-//         <td>{event.location.city}</td>
-//     </tr>
-// })
+//          events = { this.state.eventResult ? this.state.eventResult : '' }
+//          eventName = { this.state.eventResult ? this.state.eventResult[0].displayName : '' }
+//          eventUrl = { this.state.eventResult ? this.state.eventResult[0].uri : '' }
+//          eventDate = { this.state.eventResult ? moment(this.state.eventResult[0].start.date).format("MMM Do YY") : '' }
+//          eventTime = { this.state.eventResult ? moment(this.state.eventResult[0].start.time, 'HH:mm').format('hh:mm a') : '' }
+//          venue = { this.state.eventResult ? this.state.eventResult[0].venue.displayName : '' }
+//          venueUrl = { this.state.eventResult ? this.state.eventResult[0].venue.uri : '' }
+//          location = { this.state.eventResult ? this.state.eventResult[0].location.city : '' }
+
+const eventList = Object.keys(events).map((event, i) => (
+      <tr key={i}>
+         <td><a className="event-link" href={event} target="_blank">{event}</a></td>
+         <td>{event}</td>
+         <td>{event}</td>
+         <td><a className="event-link" href={event} target="_blank">{event}</a></td>
+         <td>{event}</td>
+      </tr>
+))
 
 return (
       <div className="modal fade" id="eventsModal" role="dialog">
@@ -41,14 +50,17 @@ return (
                      </thead>
 
                      <tbody>
-                        {/*{eventList}*/}
-                        <tr>
+
+                        {eventList}
+
+{/*                        <tr>
                            <td><a className="event-link" href={props.eventUrl} target="_blank">{props.eventName}</a></td>
                            <td>{props.eventDate}</td>
                            <td>{props.eventTime}</td>
                            <td><a className="event-link" href={props.venueUrl} target="_blank">{props.venue}</a></td>
                            <td>{props.location}</td>
-                        </tr>
+                        </tr>*/}
+
                      </tbody>
 
                   </table>

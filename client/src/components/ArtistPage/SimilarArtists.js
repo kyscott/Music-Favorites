@@ -13,14 +13,14 @@ const SimilarArtists = props => {
   const simArtists = props.simArtists;
   console.log(simArtists);
 
-  // const simArtistsList = simArtists.map((artist, index) => {
+  // const simArtistsList = simArtists.map((artist, i) => (
   //      <div className="card grid-content-container hvr-wobble-vertical">
-  //  <a key={index} href={artist.name}>
-  //     <h4 key={index}>{artist.name}</h4>
-  //     <img key={index} className='similar-artist-img' src={artist.image["#text"]} alt={artist.name}/>
+  //  <a key={i} href={artist.name}>
+  //     <h4 key={i}>{artist.name}</h4>
+  //     <img key={i} className='similar-artist-img' src={artist.image["#text"]} alt={artist.name}/>
   //     </a>
   //  </div>
-  // })
+  // ))
 
   return (
       <div className="col-md-9 similar-artists-container">
