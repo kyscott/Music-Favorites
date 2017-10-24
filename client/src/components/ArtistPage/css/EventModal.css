@@ -1,14 +1,19 @@
 
 a.event-link {
-  color: black;
+  color: #c12e0d;
 }
 
 a.event-link:hover {
-  color: black;
+  color: #c12e0d;
   text-decoration: underline;
 }
 
 .songkick-logo {
-	height: 20%;
-	width: 20%;
+	height: 25%;
+	width: 25%;
+}
+
+table, th, td, tbody {
+	text-align: center;
+	color: black;
 }
