@@ -43,13 +43,6 @@ if (events) {
               <tbody>
 
               {eventList}
-{/*                <tr>
-                  <td><a className="event-link" href={props.eventUrl} target="_blank">{props.eventName}</a></td>
-                  <td>{props.eventDate}</td>
-                  <td>{props.eventTime}</td>
-                  <td><a className="event-link" href={props.venueUrl} target="_blank">{props.venue}</a></td>
-                  <td>{props.location}</td>
-                </tr>*/}
 
               </tbody>
             </table>
