@@ -39,14 +39,17 @@ API = {
                format: 'json',
                autocorrect: '1'
             }
+ 
          }).then(res => {
                this.setState({
                   result: res.data.artist,
                })
                console.log(this.state.result);
+ 
             }).then(artistName => {
               axios.post('/api/get-tweets', {
                 searchArtist: this.state.result.name
+
               }).then((res) => {
                 this.setState({
                   twitterResult: res.data,
@@ -59,8 +62,6 @@ API = {
                console.log(this.state.result)
                let mbid = this.state.result.mbid;
                this.API.songkick.getEvents(mbid)
-
-
             }).catch(err => console.log(err));
          },
 
@@ -97,7 +98,6 @@ API = {
     artist: {
       onClickFavorite: (event) => {
         event.preventDefault();
-        console.log('hi');
       }
     },
 
@@ -112,7 +112,6 @@ API = {
             this.setState({
                eventResult: res.data.resultsPage.results.event
             })
-            console.log(this.state.eventResult)
          }).catch(err => console.log(err));
       }
    }
@@ -146,6 +145,8 @@ API = {
 
            <TopSongs 
              artistName = { this.state.result.name }
+             albums = { this.state.albumResult ? this.state.albumResult.album : ''}
+
              albumName01 = { this.state.albumResult ? this.state.albumResult.album[0].name : '' }
              albumImage01 = { this.state.albumResult ? this.state.albumResult.album[0].image[3]["#text"] : '' }
              iTunesLink01 = { `http://www.itunes.com/${this.state.result.name}/${this.state.albumResult ? this.state.albumResult.album[0].name : ''}` }

@@ -26,7 +26,9 @@ if (simArtists) {
 }
   return (
     <div className="col-md-9 similar-artists-container">
+    
        {similarArtistsList}
+
     </div>
   )
 }
